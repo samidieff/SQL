@@ -1,0 +1,16 @@
+--Create a clothing store database
+
+CREATE TABLE clothing_store (id INTEGER, clothing_item TEXT, inventory INTEGER, color TEXT, price INTEGER);
+INSERT INTO clothing_store VALUES (1, "Long Sleeve Shirt", 4, "Blue", 20);
+INSERT INTO clothing_store VALUES (2, "Long Sleeve Shirt", 2, "Green", 20);
+INSERT INTO clothing_store VALUES (3, "Short Sleeve Shirt", 2, "White", 12);
+INSERT INTO clothing_store VALUES (4, "Short Sleeve Shirt", 1, "Green", 12);
+INSERT INTO clothing_store VALUES (5, "Shorts", 3, "Denim", 16);
+INSERT INTO clothing_store VALUES (6, "Shorts", 3, "Cargo", 17);
+
+--display the database ordered by price
+SELECT * FROM clothing_store WHERE price ORDER BY price;
+
+--display total sum of inventory
+SELECT inventory, SUM(inventory) FROM clothing_store;
+
