@@ -225,3 +225,6 @@ SELECT cc.full_name, cc.powers
 ---how many total pages has sarah j maas published?
 
 SELECT SUM(pages) FROM sarah_j_maas_books;
+
+
+
