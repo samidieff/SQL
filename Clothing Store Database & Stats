@@ -1,0 +1,114 @@
+Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in. 
+You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store. 
+You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.
+
+
+---Create table: clothing_store
+
+CREATE TABLE clothing_store
+    (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    item TEXT, 
+    design TEXT, 
+    inventory INTEGER, 
+    price NUMERIC);
+    
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("t-shirt", "green", 5, 12.99);
+
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("long sleeve shirt", "black with white stripes", 3, 15.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("shorts", "denim", 6, 18.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("skirt", "pink", 4, 13.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("pants", "denim", 4, 22.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("t-shirt", "black with white stripes", 7, 12.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("long sleeve shirt", "pink", 4, 15.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("shorts", "cargo", 7, 18.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("skirt", "green", 6, 13.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price) 
+    VALUES ("pants", "elephant", 3, 26.99);
+
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("jersey", "San Jose Sharks", 2, 68.50);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("cowboy hat", "pink with rhinestones", 5, 45.00);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("dad hat", "Mickey Mouse logo", 8, 24.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("blouse", "white", 0, 19.99);
+    
+INSERT INTO clothing_store
+    (item, design, inventory, price)
+    VALUES ("shorts", "black with white stripes", 3, 18.99);
+
+
+---display full database to ensure no errors
+
+SELECT * FROM clothing_store;
+
+
+---which clothing items are green?
+
+SELECT id, item, design FROM clothing_store
+    WHERE design="green";
+
+
+---display all items in the database ordered by price
+
+SELECT * FROM clothing_store
+    WHERE price ORDER BY price;
+
+ 
+---display all items in the database except for the inventory column and order them by price
+
+SELECT id, item, design, price 
+    FROM clothing_store
+    WHERE price ORDER BY price;
+
+
+---which clothing items are black with white stripes?
+
+SELECT id, item, design FROM clothing_store
+    WHERE design="black with white stripes";
+
+
+---how many items are low in stock?
+
+SELECT * FROM clothing_store
+    WHERE inventory <= 5
+    ORDER BY inventory;
+    
+    
+    
