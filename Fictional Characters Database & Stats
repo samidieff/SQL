@@ -1,0 +1,227 @@
+In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create nice human readable lists.
+
+
+---/* Create table about the people and what they do here */
+---Table 1: throne_of_glass_characters
+
+CREATE TABLE throne_of_glass_characters 
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+     full_name TEXT, 
+     title TEXT,
+     powers TEXT,
+     languages_known TEXT,
+     age INTEGER,
+     hair_color TEXT, 
+     eye_color TEXT, 
+     series_id1 INTEGER, 
+     series_id2 INTEGER,
+     series_id3 INTEGER, 
+     series_id4 INTEGER, 
+     series_id5 INTEGER, 
+     series_id6 INTEGER, 
+     series_id7 INTEGER, 
+     series_id8 INTEGER);
+
+INSERT INTO throne_of_glass_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id4, series_id5, series_id6, series_id8)     
+    VALUES ("Rowan Whitethorn Galathynius", "consort", "wind/shapeshifting", "common tongue/Old Fae", 500, "white", "green", 123, 124, 125, 127);
+INSERT INTO throne_of_glass_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2, series_id3, series_id4, series_id5, series_id6, series_id8)     
+    VALUES ("Aelin Ashryver Whitethorn Galathynius", "queen/heir of fire/fireheart", "fire/water/world walker", "common tongue/Old Fae", 20, "platinum blonde", "teal and gold", 120, 121, 122, 123, 124, 125, 127);
+INSERT INTO throne_of_glass_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2, series_id3, series_id4, series_id5, series_id6, series_id8)     
+    VALUES ("Dorian Havilliard", "king", "raw magic/world walker", "common tongue", 23, "black", "violet", 120, 121, 122, 123, 124, 125, 127);
+INSERT INTO throne_of_glass_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id4, series_id5, series_id6, series_id8)     
+    VALUES ("Manon Blackbeak", "queen of the Crochans/witch", "sense of smell/strong intuition/abnormal strenth and fighting skill", "common tongue", 100, "white", "gold", 123, 124, 125, 127);
+INSERT INTO throne_of_glass_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id2, series_id5, series_id6, series_id8)     
+    VALUES ("Lysandra Ashryver", "lady of caraverre", "shapeshifting", "common tongue", 20, "brown", "green", 121, 124, 125, 127);
+
+
+
+
+---Table 2: crescent_city_characters
+
+CREATE TABLE crescent_city_characters 
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+     full_name TEXT, 
+     title TEXT,
+     powers TEXT,
+     languages_known TEXT,
+     age INTEGER,
+     hair_color TEXT, 
+     eye_color TEXT, 
+     series_id1 INTEGER, 
+     series_id2 INTEGER);
+
+INSERT INTO crescent_city_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2)    
+    VALUES ("Bryce Quinlan", "starborn princess", "starlight/winnow", "common tongue/Old Fae", 24, "red", "amber", 128, 129);
+INSERT INTO crescent_city_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2)    
+    VALUES ("Hunt Athalar", "the umbra mortis", "angel/flight/lightning", "common tongue", 200, "black", "dark brown", 128, 129);
+INSERT INTO crescent_city_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2)     
+    VALUES ("Ruhn Danaan", "crown prince of the valbaren fae", "mind speaking/shadows/starlight", "common tongue/Old Fae", 150, "black", "violet", 128, 129);
+INSERT INTO crescent_city_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2)     
+    VALUES ("Danika Fendyr", "alpha", "Shapeshifting/bloodhound", "common tongue", 22, "white", "gold", 128, 129);
+INSERT INTO crescent_city_characters
+    (full_name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2)     
+    VALUES ("Ithan Holstrom", "alpha", "shapeshifting", "common tongue", 23, "blonde", "brown", 128, 129);
+    
+
+
+
+---Table 3: acotar_characters
+
+CREATE TABLE acotar_characters 
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+     name TEXT, 
+     title TEXT,
+     powers TEXT,
+     languages_known TEXT,
+     age INTEGER,
+     hair_color TEXT, 
+     eye_color TEXT, 
+     series_id1 INTEGER, 
+     series_id2 INTEGER,
+     series_id3 INTEGER,
+     series_id4 INTEGER, 
+     series_id5 INTEGER, 
+     series_id6 INTEGER, 
+     series_id7 INTEGER);
+
+INSERT INTO acotar_characters
+    (name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2, series_id3, series_id4, series_id5, series_id6, series_id7)     
+    VALUES ("Feyre Archeron", "high lady of the night court", "starlight/shapeshifting/winnow/mind speaking", "common tongue", 24, "brown", "blue gray", 130, 131, 132, 133, 134, 128, 129);
+INSERT INTO acotar_characters
+    (name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2, series_id3, series_id4, series_id5)     
+    VALUES ("Nesta Archeron", "valkyrie", "death", "common tongue", 26, "brown", "blue gray", 130, 131, 132, 133, 134);
+INSERT INTO acotar_characters
+    (name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2, series_id3, series_id4, series_id5, series_id6, series_id7)     
+    VALUES ("Rhysand", "high lord of the night court", "daemati/misting/winnow", "common tongue/Old Fae", 500, "black", "violet", 130, 131, 132, 133, 134, 128, 129);
+INSERT INTO acotar_characters
+    (name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2, series_id3, series_id4, series_id5)     
+    VALUES ("Elaine Archeron", "seer", "visions of the present, past and future", "common tongue", 25, "brown", "blue gray", 130, 131, 132, 133, 134);
+INSERT INTO acotar_characters
+    (name, title, powers, languages_known, age, hair_color, eye_color, series_id1, series_id2, series_id3, series_id4, series_id5)     
+    VALUES ("Lucien Vanserra", "emissary", "ability to see through glamours and/or lies", "common tongue", 200, "red", "gold", 130, 131, 132, 133, 134);
+    
+
+
+
+---Table 4: sarah_j_maas_books
+
+CREATE TABLE sarah_j_maas_books 
+    (series_id INTEGER,
+     title TEXT, 
+     pages INTEGER);
+
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (120, "Throne of Glass", 432);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (121, "The Assassin's Blade", 435);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (122, "Crown of Midnight", 432);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (123, "Heir of Fire", 592);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (124, "Queen of Shadows", 656);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (125, "Empire of Storms", 704);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (126, "Tower of Dawn", 672);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (127, "Kingdom of Ash", 984);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (128, "CC House of Earth and Blood", 803);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (129, "CC House of Sky and Breath", 768);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (130, "A Court of Thorns and Roses", 448);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (131, "A Court of Mist and Fury", 624);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)    
+    VALUES (132, "A Court of Wings and Ruin", 699);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (133, "A Court of Frost and Starlight", 272);
+INSERT INTO sarah_j_maas_books
+    (series_id, title, pages)     
+    VALUES (134, "A Court of Silver Flames", 768);
+
+
+
+
+---display the database with all of the author's published books
+
+SELECT * FROM sarah_j_maas_books;
+
+
+
+---do any characters in the throne of glass series have the same eye color as any of the acotar characters?
+
+SELECT tog.full_name, tog.eye_color, acotar.name, acotar.eye_color
+    FROM throne_of_glass_characters tog, acotar_characters acotar
+    ON tog.eye_color=acotar.eye_color;
+
+
+
+---do any characters in the crescent city books have the same hair color as any of the throne of glass characters?
+
+SELECT tog.full_name, tog.hair_color, cc.full_name, cc.hair_color
+    FROM throne_of_glass_characters tog, crescent_city_characters cc
+    ON tog.hair_color=cc.hair_color;
+    
+
+
+---which throne of glass characters are in book 3 of the series?
+
+SELECT full_name, series_id3
+    FROM throne_of_glass_characters
+    WHERE series_id3;
+    
+
+
+---which characters are in book 4 of the throne of glass series? what's that book called again?
+
+SELECT tog.full_name, tog.series_id4, sjm.title,  sjm.series_id
+    FROM throne_of_glass_characters tog, sarah_j_maas_books sjm
+    ON tog.series_id4=sjm.series_id;
+    
+
+
+---are any of the characters in the cresent city books the same age as some of the acotar characters?
+
+SELECT cc.full_name, cc.age, acotar.name, acotar.age
+    FROM crescent_city_characters cc, acotar_characters acotar
+    ON cc.age=acotar.age;
+
+
+
+---which characters in crescent city can shapeshift?
+
+SELECT cc.full_name, cc.powers
+    FROM crescent_city_characters cc
+    WHERE powers="shapeshifting";
+    
+
+
+---how many total pages has sarah j maas published?
+
+SELECT SUM(pages) FROM sarah_j_maas_books;
