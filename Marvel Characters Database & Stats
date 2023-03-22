@@ -57,7 +57,7 @@ INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA
 
 
 
----display the entire database to ensure no errors
+---display the Marvel characters database
 
 SELECT * FROM marvels;
 
