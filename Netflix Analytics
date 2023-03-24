@@ -67,3 +67,11 @@ FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 WHERE type = 'Movie'); 
 
 
+#6. List all the products sold in Los Angeles in February, and include how many of each were sold.
+
+SELECT product, SUM(quantity)
+FROM BIT_DB.FebSales
+WHERE location like '%Los Angeles%'
+GROUP BY product;
+
+
