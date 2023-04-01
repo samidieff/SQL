@@ -1,8 +1,7 @@
 In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data.
 
 
---Show Customers (their full names, customer ID, and country) 
-who are not in the US. (Hint: != or <> can be used to say "is not equal to").--
+--Show Customers (their full names, customer ID, and country) who are not in the US. 
 
 SELECT customerid, firstname, lastname, country
 FROM customers
@@ -10,7 +9,7 @@ WHERE country <> 'US'
 ;
 
 
---Show only the Customers from Brazil. --
+--Show only the Customers from Brazil.
 
 SELECT firstname, lastname, country
 FROM customers
@@ -106,7 +105,7 @@ JOIN genres
 ON mt.MediaTypeId=genres.GenreId;
 
 
-****---I wanna know the playlist name, track name, track id, album name, 
+---Write a query that shows the each playlist and what songs are included. 
 
 SELECT play.name as playlist_name, 
   tracks.trackid as trackID, 
