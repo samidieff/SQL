@@ -1,9 +1,7 @@
 In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
 
 
-#1. How many orders were placed in January? Remember to filter out the blank and incorrect order IDs like we did in the "dealing with messy data" 
-section of the previous lesson!
-
+#1. How many orders were placed in January? 
 
 SELECT COUNT(orderid)
 FROM BIT_DB.JanSales
@@ -40,8 +38,7 @@ FROM BIT_DB.JanSales
 ORDER BY price ASC LIMIT 1;
 
 
-#5. What is the total revenue for each product sold in January? (Revenue can be calculated using the number of products sold and the price of the products).
-
+#5. What is the total revenue for each product sold in January? 
 
 SELECT SUM(quantity)*price as Revenue, product
 FROM BIT_DB.JanSales
