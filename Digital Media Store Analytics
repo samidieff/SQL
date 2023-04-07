@@ -105,7 +105,7 @@ JOIN genres
 ON mt.MediaTypeId=genres.GenreId;
 
 
----Write a query that shows the each playlist and what songs are included. 
+---Write a query that shows each playlist and what songs are included. 
 
 SELECT play.name as playlist_name, 
   tracks.trackid as trackID, 
